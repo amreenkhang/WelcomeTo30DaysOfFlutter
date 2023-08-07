@@ -1,4 +1,5 @@
-import 'package:firstapp/home_page.dart';
+import 'package:firstapp/screens/Login_Page.dart';
+import 'package:firstapp/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,12 @@ class firstapp extends StatelessWidget {
     //const fix = 3.14;
 
     return MaterialApp(
-      home: HomePage(),
+      initialRoute: "/home",
+     routes: {
+      "/": (context)=> LoginPage(),
+      "/home" : (context)=>HomePage(),
+     "/login" : (context)=>LoginPage()
+     },
     );
   }
 }
